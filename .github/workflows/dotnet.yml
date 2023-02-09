@@ -36,7 +36,8 @@ jobs:
       with:
         name: website
         path: website/**
-        if-no-files-found: warn
+        if-no-files-found: warn  # <-- last line of build job: insert below this line
+
   deploy_staging:
     needs: build
     runs-on: ubuntu-latest
@@ -67,3 +68,4 @@ jobs:
 
     - name: az cli logout
       run: az logout
+
