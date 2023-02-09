@@ -37,7 +37,6 @@ jobs:
         name: website
         path: website/**
         if-no-files-found: warn
-
   deploy_staging:
     needs: build
     runs-on: ubuntu-latest
